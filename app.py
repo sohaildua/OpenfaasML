@@ -20,6 +20,10 @@ def inception():
 def pigo():
     return render_template('blur.html')
 
+@app.route('/faceDetect')
+def faceDetect():
+    return render_template('pigo.html')
+
 
 @app.route('/colidr')
 def colidr():
@@ -69,5 +73,14 @@ def color():
     return data
 
 
+@app.route('/face', methods=['POST'])
+def face():
+    url = request.form.get('url')
+    gateway_hostname = os.getenv("gateway_hostname", "gateway")
+    r = requests.get("http://" + gateway_hostname +
+                     ".openfaas:8080/function/face-detect-pigo", data=url)
+    data = base64.b64encode(r.content)
+    return data
+
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 8084)))

@@ -94,7 +94,30 @@ $(function() {
        });
        return false;
    });
-});
+})
+
+$(function() {
+    $("#image-input5").submit(function() {
+        display();
+        document.getElementById("image-input5").classList.add("disabled");
+        $.ajax({
+            type: "POST",
+            url: "/face",
+            data: $("#image-input5").serialize(),
+            success: function(data) {
+                document.getElementById("image-input5").classList.remove("disabled");
+                document.getElementById("url").value = "";
+                var sketch = document.createElement("img");
+                sketch.style.maxWidth = "100%";
+                sketch.style.borderRadius = "10px";
+                sketch.src = 'data:image/jpeg;base64, ' + data;
+                document.getElementById("mldata").appendChild(sketch);
+            }
+        });
+        return false;
+    });
+ });
+ ;
 
 function display() {
     $("#mldata").empty();
