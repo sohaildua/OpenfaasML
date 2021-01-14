@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
 
 p {
     font-size: 14.4px;
@@ -80,10 +81,20 @@ legend.scheduler-border {
     margin-right:50px;
 }
 
+@font-face {
+    font-family: myFirstFonts;
+    src: url(font.otf)
+  }
+  
 header #home {
     float: left;
     background: #ddd;
-    width: 8.5%;
+    width: 14.7%;
+}
+
+h1 {
+    font-family: myFirstFonts;
+    font-size: 36px;
 }
 
 header #home:hover {
@@ -93,9 +104,11 @@ header #home:hover {
 header #title {
     float: right;
     text-align: center;
-    background: #00b388;
-    width: 91.5%;
+    background: #2a9dca;
+    width: 85.3%;
     color: white;
+
     font-size: 20px;
     margin-bottom: 40px;
 }
+
