@@ -36,7 +36,7 @@ For these reasons, the application is deployed on top of Kubernetes, which orche
 ```
 _Alternatively, you can avoid having to locally build the image and use the pre-built image from Docker Hub._
 ```
-  $ kubectl create deployment faasml --image="docker.io/ryanrashid/faasml:v3"
+  $ kubectl create deployment faasml --image="docker.io/sdgamer007/faasml:latest"
 ```
 4. Create a Kubernetes service from the deployment.
 ```
