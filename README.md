@@ -4,7 +4,7 @@ This is a web application with built-in triggers to machine learning models powe
 
 2. Allocate resources efficiently between different processes 
 
-For these reasons, the application is deployed on top of Kubernetes, which orchestrates these services automatically so developers can avoid dealing with underlying server infrastructures like routing, monitoring, scaling, etc.
+For these reasons, the application is deployed on top of Kubernetes, which orchestrates these services automatically so developers can avoid dealing with underlying server infrastructures like routing, monitoring, scaling,etc.
 
 > Note that this UI does not come automatically installed with the ML models since they are outsourced and deployed seperately with OpenFaaS to demonstrate a serverless architecture (see the [Deploying Machine Learning](#deploying-machine-learning) section for more details).
 
