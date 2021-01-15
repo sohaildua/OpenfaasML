@@ -2,7 +2,7 @@
 This is a web application with built-in triggers to machine learning models powered by OpenFaaS. The aim of this project is to demonstrate how machine learning computations can be executed using an _on-premise_ serverless approach, instead of the traditional server model. Because the solution must be on-premise, cloud-based approaches are not considered; rather, this exploration seeks to use an **in-house server infrastructure but with the same functionality as a cloud-native model**. Namely, it must be able to:
 1. Autoscale workloads up and down from zero
 
-2. Allocate resources efficiently between different processes
+2. Allocate resources efficiently between different processes 
 
 For these reasons, the application is deployed on top of Kubernetes, which orchestrates these services automatically so developers can avoid dealing with underlying server infrastructures like routing, monitoring, scaling, etc.
 
